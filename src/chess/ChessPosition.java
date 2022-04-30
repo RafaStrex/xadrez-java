@@ -8,7 +8,7 @@ public class ChessPosition {
 	
 	public ChessPosition(char column, int row) {
 		if (column < 'a' || column > 'h' || row < 1 || row > 8) {
-			throw new ChessException("O tabuleiro deve estar entre as instancias A1 até H8");
+			throw new ChessException("Sua jogada deve estar entre as instancias A1 até H8");
 		}
 		this.column = column;
 		this.row = row;
