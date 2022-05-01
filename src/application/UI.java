@@ -83,7 +83,7 @@ public class UI {
 			System.out.println();
 		}
 		System.out.print(ANSI_CYAN);
-		System.out.println("  A B C D E F G H");
+		System.out.println("  a b c d e f g h");
 		System.out.print(ANSI_RESET);
 	}
 	
@@ -99,7 +99,7 @@ public class UI {
 			System.out.println();
 		}
 		System.out.print(ANSI_CYAN);
-		System.out.println("  A B C D E F G H");
+		System.out.println("  a b c d e f g h");
 		System.out.print(ANSI_RESET);
 	}
 

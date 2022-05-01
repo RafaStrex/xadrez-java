@@ -38,6 +38,12 @@ public class Program {
 				if(capturedPiece != null) {
 					captured.add(capturedPiece);
 				}
+				
+				if (chessMatch.getPromoted() != null) {
+					System.out.print("Escolha a peca que sera promovida \n B = Bispo \n C = Cavalo \n R = Rainha \n T = Torre \n B / C / R / T ???: ");
+					String type = sc.nextLine();
+					chessMatch.replacePromotedPiece(type);
+				}
 			}
 			catch (ChessException e) {
 				System.out.println(e.getMessage());
