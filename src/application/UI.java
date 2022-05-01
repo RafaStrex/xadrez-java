@@ -48,7 +48,7 @@ public class UI {
 			return new ChessPosition(column, row);
 		}
 		catch (RuntimeException e) {
-			throw new InputMismatchException("Erro ao ler posicao do xadrez. Valores validos são de A1 até H8");
+			throw new InputMismatchException("Erro ao ler posicao do xadrez. Valores validos sao de A1 ate H8");
 		}
 	}
 	
