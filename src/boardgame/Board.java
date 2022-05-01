@@ -8,7 +8,7 @@ public class Board {
 	
 	public Board(Integer rows, Integer columns) {
 		if (rows < 1 || columns < 1){
-			throw new BoardException("É necessário que haja pelo menos 1 linha e 1 coluna");
+			throw new BoardException("Eh necessario que haja pelo menos 1 linha e 1 coluna");
 		}
 		this.rows = rows;
 		this.columns = columns;
@@ -39,7 +39,7 @@ public class Board {
 	
 	public void placePiece(Piece piece, Position position) {
 		if(thereIsAPiece(position)) {
-			throw new BoardException("Ja existe uma peça na posição " + position);
+			throw new BoardException("Ja existe uma peca na posicao " + position);
 		}
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
