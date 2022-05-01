@@ -1,6 +1,5 @@
 package chess;
 
-import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -107,8 +106,7 @@ public class ChessMatch {
 		}
 
 		// #Specialmove em passant
-		if (movedPiece instanceof Pawn
-				&& (target.getRow() == source.getRow() - 2 || target.getRow() == source.getRow() + 2)) {
+		if (movedPiece instanceof Pawn && (target.getRow() == source.getRow() - 2 || target.getRow() == source.getRow() + 2)) {
 			enPassantVulnerable = movedPiece;
 		} else
 			enPassantVulnerable = null;
@@ -120,8 +118,8 @@ public class ChessMatch {
 		if (promoted == null) {
 			throw new IllegalStateException("Nao ha peca para ser promovida");
 		}
-		if (!type.equals("B") && !type.equals("C") && !type.equals("R") && !type.equals("T")) {
-			throw new InvalidParameterException("Peca invalida para ser promovida");
+		if (!type.equals("B") && !type.equals("C") && !type.equals("R") & !type.equals("T")) {
+			return promoted;
 		}
 		
 		Position pos = promoted.getChessPosition().toPosition();

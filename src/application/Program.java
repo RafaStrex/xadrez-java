@@ -40,8 +40,13 @@ public class Program {
 				}
 				
 				if (chessMatch.getPromoted() != null) {
-					System.out.print("Escolha a peca que sera promovida \n B = Bispo \n C = Cavalo \n R = Rainha \n T = Torre \n B / C / R / T ???: ");
-					String type = sc.nextLine();
+					System.out.print("Escolha a peca que sera promovida: \n\n B = Bispo \n C = Cavalo \n R = Rainha \n T = Torre \n\nB / C / R / T ???: ");
+					String type = sc.nextLine().toUpperCase();
+					while (!type.equals("B") && !type.equals("C") && !type.equals("R") & !type.equals("T")) {
+						UI.clearScreen();
+						System.out.print("\nValor invalido!!!\n\nDigite novamente: \n B = Bispo \n C = Cavalo \n R = Rainha \n T = Torre \n\nB / C / R / T ???: ");
+						type = sc.nextLine().toUpperCase();
+					}
 					chessMatch.replacePromotedPiece(type);
 				}
 			}
